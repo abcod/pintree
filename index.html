@@ -283,6 +283,9 @@
         if (item.title.toLowerCase().includes(query)) {
           results.push(item);
         }
+        if (item.url && item.url.toLowerCase().includes(query)) {
+          results.push(item);
+        }
         if (item.children) {
           const childResults = searchInData(item.children, query);
           if (childResults.length > 0) {
